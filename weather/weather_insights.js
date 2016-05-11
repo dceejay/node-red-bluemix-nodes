@@ -21,11 +21,8 @@ module.exports = function(RED) {
     //var service = cfenv.getAppEnv().getServiceCreds(/insights for weather/i);
     var service;
     for (var i in services) {
-        console.log("I",i);
-        console.log("S",services[i]);
         if (i.match(/^(weatherinsights)/i)) {
-            service = services[i];
-            console.log("DING");
+            service = services[i][0];
         }
     }
 
